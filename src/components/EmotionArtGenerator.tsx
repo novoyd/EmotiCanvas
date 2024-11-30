@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
+import Image from 'next/image';
 
 interface EmotionState {
   energy: number;
@@ -161,10 +162,11 @@ export default function EmotionArtGenerator() {
         {generatedImage && (
           <div className="mt-4">
             <h3 className="font-medium mb-2">Generated Image:</h3>
-            <img 
+            <Image 
               src={generatedImage} 
               alt="Generated artwork" 
-              className="w-full rounded-lg"
+              width={500}
+              height={300}
             />
           </div>
         )}
