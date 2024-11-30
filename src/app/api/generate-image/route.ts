@@ -6,6 +6,8 @@ import OpenAI from 'openai';
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
+export const maxDuration = 50; // Set the max duration for vercel
+export const dynamic = 'force-dynamic'; // added this to prevent caching or stale responses
 
 // Define our POST handler for the /api/generate-image endpoint
 export async function POST(request: Request) {
