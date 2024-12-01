@@ -11,6 +11,8 @@
  
 @layer base {
   body {
+    margin: 0;
+    padding: 0;
     @apply bg-background text-foreground min-h-screen;
   }
 }
